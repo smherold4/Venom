@@ -1,0 +1,85 @@
+/*css*/
+
+/*background-color: transparent;
+background-image: none;
+background: rgba(0,0,0,0.0);*/
+
+.venom {
+background-color: #858585;
+background-image: none;
+
+}
+
+.outsidevenom {
+  background-color: black;
+  
+}
+
+.tri {
+  background-color: #858585;
+  background-image: none;
+
+}
+
+.bordertri {
+  background-color: black;
+  background-image: none;
+  
+  
+}
+
+.segment {
+  background-color: #858585;
+
+}
+
+.guns {
+  background-color: black;
+  background-image: none;
+  
+}
+
+#field {
+  
+  background-color: black;
+  border: thick solid red;
+  border-radius: 5px;
+}
+
+div.black {
+  
+  height: 20px;
+  width: 20px;
+  background-color: #858585;
+  display: inline-block;
+}
+
+div.blue {
+  
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  display: inline-block;
+}
+
+div.white {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  display: inline-block;
+  
+}
+
+#l1 {
+  
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  
+  
+}
+
+h1 {
+  
+  color: green;
+}
