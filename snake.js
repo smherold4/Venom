@@ -6,7 +6,7 @@
   var Snake = S.Snake = function(dir, dangerFrequency) {
     this.dir = dir;
     var sh = 17;
-    this.clock = 0;
+    this.clock = -5;
     
     this.venomClock = 20;
     this.hit = false;
@@ -163,8 +163,8 @@
     
     var row = first[0] - 5 + this.DIRECTIONS[this.dir][0];
     var col = first[1] - 5 + this.DIRECTIONS[this.dir][1];
-    var row = (row + 2500000000) % 25 + 5;
-    var col = (col + 2500000000) % 25 + 5;   
+    row = (row + 2500000000) % 25 + 5;
+    col = (col + 2500000000) % 25 + 5;   
     this.segments.unshift([row, col]);
     
     if (this.venomClock <= 0) {
@@ -201,28 +201,28 @@
     for (var a = 0; a < that.bulletsNorth.length; a++) {
       
      
-      var row = that.bulletsNorth[a][0];
-      var col = that.bulletsNorth[a][1];
-      if (row !== 34) {that.board[row][col] = null}
+      var rowN = that.bulletsNorth[a][0];
+      var colN = that.bulletsNorth[a][1];
+      if (rowN !== 34) {that.board[rowN][colN] = null}
       that.bulletsNorth[a][0] -= 1;
-      row = that.bulletsNorth[a][0];
-      col = that.bulletsNorth[a][1];
+      rowN = that.bulletsNorth[a][0];
+      colN = that.bulletsNorth[a][1];
       that.segments.forEach( function(seg) {
-        if (seg[0] === row && seg[1] == col ) {
+        if (seg[0] === rowN && seg[1] == colN ) {
           that.hit = true;
      
         }
  
       })
 
-      if (row < 2) {
+      if (rowN < 2) {
         var kN = true
-        that.board[row][col] = null;
+        that.board[rowN][colN] = null;
       } else {
-        if (Math.abs(17 - row) > 12 || Math.abs(17 - col) > 12) {
-         that.board[row][col] = '<img class="bordertri" src="bullet.png">'
+        if (Math.abs(17 - rowN) > 12 || Math.abs(17 - colN) > 12) {
+         that.board[rowN][colN] = '<img class="bordertri" src="bullet.png">'
         } else {
-         that.board[row][col] = '<img class="tri" src="bullet.png">'
+         that.board[rowN][colN] = '<img class="tri" src="bullet.png">'
         } 
       
       
@@ -238,28 +238,28 @@
     for (var a = 0; a < that.bulletsSouth.length; a++) {
       
      
-      var row = that.bulletsSouth[a][0];
-      var col = that.bulletsSouth[a][1];
-       if (row !== 0) {that.board[row][col] = null}
+      var rowS = that.bulletsSouth[a][0];
+      var colS = that.bulletsSouth[a][1];
+       if (rowS !== 0) {that.board[rowS][colS] = null}
       that.bulletsSouth[a][0] += 1;
-      row = that.bulletsSouth[a][0];
-      col = that.bulletsSouth[a][1];
+      rowS = that.bulletsSouth[a][0];
+      colS = that.bulletsSouth[a][1];
       that.segments.forEach( function(seg) {
-        if (seg[0] === row && seg[1] == col ) {
+        if (seg[0] === rowS && seg[1] == colS ) {
           that.hit = true;
      
         }
  
       })
       
-      if (row > 32) {
+      if (rowS > 32) {
         var kS = true
-        that.board[row][col] = null;
+        that.board[rowS][colS] = null;
       } else {
-        if (Math.abs(17 - row) > 12 || Math.abs(17 - col) > 12) {
-         that.board[row][col] = '<img class="bordertri" src="bullet.png">'
+        if (Math.abs(17 - rowS) > 12 || Math.abs(17 - colS) > 12) {
+         that.board[rowS][colS] = '<img class="bordertri" src="bullet.png">'
         } else {
-         that.board[row][col] = '<img class="tri" src="bullet.png">'
+         that.board[rowS][colS] = '<img class="tri" src="bullet.png">'
         } 
       } 
     }
@@ -272,28 +272,26 @@
     for (var a = 0; a < that.bulletsEast.length; a++) {
       
      
-      var row = that.bulletsEast[a][0];
-      var col = that.bulletsEast[a][1];
-      if (col !== 0) {that.board[row][col] = null}
+      var rowE = that.bulletsEast[a][0];
+      var colE = that.bulletsEast[a][1];
+      if (colE !== 0) {that.board[rowE][colE] = null}
       that.bulletsEast[a][1] += 1;
-      row = that.bulletsEast[a][0];
-      col = that.bulletsEast[a][1];
+      rowE = that.bulletsEast[a][0];
+      colE = that.bulletsEast[a][1];
       that.segments.forEach( function(seg) {
-        if (seg[0] === row && seg[1] == col ) {
+        if (seg[0] === rowE && seg[1] == colE ) {
           that.hit = true;
-     
         }
- 
       })
       
-      if (col > 32) {
+      if (colE > 32) {
         var kE = true
-        that.board[row][col] = null;
+        that.board[rowE][colE] = null;
       } else {
-        if (Math.abs(17 - row) > 12 || Math.abs(17 - col) > 12) {
-         that.board[row][col] = '<img class="bordertri" src="bullet.png">'
+        if (Math.abs(17 - rowE) > 12 || Math.abs(17 - colE) > 12) {
+         that.board[rowE][colE] = '<img class="bordertri" src="bullet.png">'
         } else {
-         that.board[row][col] = '<img class="tri" src="bullet.png">'
+         that.board[rowE][colE] = '<img class="tri" src="bullet.png">'
         } 
       } 
     }
@@ -303,30 +301,28 @@
     }
     
     for (var a = 0; a < that.bulletsWest.length; a++) {
-      
-     
-      var row = that.bulletsWest[a][0];
-      var col = that.bulletsWest[a][1];
-      that.segments.forEach( function(seg) {
-        if (seg[0] === row && seg[1] == col ) {
-          that.hit = true;
-     
-        }
- 
-      })
-      
-      if (col !== 34) {that.board[row][col] = null}
+        
+      var rowW = that.bulletsWest[a][0];
+      var colW = that.bulletsWest[a][1];
+      if (colW !== 34) {that.board[rowW][colW] = null}
       that.bulletsWest[a][1] -= 1;
-      row = that.bulletsWest[a][0];
-      col = that.bulletsWest[a][1];
-      if (col < 2) {
+      rowW = that.bulletsWest[a][0];
+      colW = that.bulletsWest[a][1];
+      
+      that.segments.forEach( function(seg) {
+        if (seg[0] === rowW && seg[1] == colW ) {
+          that.hit = true;
+        }
+      })
+
+      if (colW < 2) {
         var kE = true
-        that.board[row][col] = null;
+        that.board[rowW][colW] = null;
       } else {
-        if (Math.abs(17 - row) > 12 || Math.abs(17 - col) > 12) {
-         that.board[row][col] = '<img class="bordertri" src="bullet.png">'
+        if (Math.abs(17 - rowW) > 12 || Math.abs(17 - colW) > 12) {
+         that.board[rowW][colW] = '<img class="bordertri" src="bullet.png">'
         } else {
-         that.board[row][col] = '<img class="tri" src="bullet.png">'
+         that.board[rowW][colW] = '<img class="tri" src="bullet.png">'
         } 
       } 
     }
