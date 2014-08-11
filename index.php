@@ -23,7 +23,10 @@
   <div id='field' 
   style="margin-left: 320px; width: 700px">
 </div> 
-  
+<br><br>
+  <div>
+  <h3><a href="http://www.mikeherold.es">return to www.mikeherold.es</a></h3>
+</div>
   <script>
   $(function () {
     
