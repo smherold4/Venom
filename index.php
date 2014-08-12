@@ -30,7 +30,7 @@
   <script>
   $(function () {
     
-    var game = new S.Snake('E', 5);
+    var game = new S.Snake('S', 5);
 
     var view = new S.View('#field', game);
     view.prestart();
