@@ -4,6 +4,11 @@
 background-image: none;
 background: rgba(0,0,0,0.0);*/
 
+body {
+  
+  overflow: hidden;
+}
+
 .venom {
 background-color: #858585;
 background-image: none;
