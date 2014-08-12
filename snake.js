@@ -12,7 +12,7 @@
     this.hit = false;
     this.freq = dangerFrequency;
     // this.segments = [[sh,10]]
-    this.segments = [[sh,10],[sh,11],[sh,12],[sh,13]]// ,[sh,13],[sh,14],[sh,15]]
+    this.segments = [[sh,13],[sh,12],[sh,11],[sh,10]]// ,[sh,13],[sh,14],[sh,15]]
     this.gunSouth = [34,17, -1] //not increasing eastwards (going left)
     this.bulletsNorth = [];
     this.gunEast = [17,34,1] //increasing downwards
@@ -119,7 +119,7 @@
       setTimeout(function () {
         
         $("#seconds").text("0");
-        var game = new S.Snake('W',10);
+        var game = new S.Snake('E',10);
 
         var view = new S.View('#field', game);
         view.prestart();

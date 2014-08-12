@@ -23,14 +23,14 @@
  </div></center>
 
   <div id='field' 
-  style="margin-left: 310px; width: 700px">
+  style="margin-left: 290px; width: 700px">
 </div> 
 
   
   <script>
   $(function () {
     
-    var game = new S.Snake('S', 5);
+    var game = new S.Snake('E', 5);
 
     var view = new S.View('#field', game);
     view.prestart();
