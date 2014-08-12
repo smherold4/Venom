@@ -23,7 +23,7 @@
  </div></center>
 
   <div id='field' 
-  style="margin-left: 350px; width: 700px">
+  style="margin-left: 310px; width: 700px">
 </div> 
 
   
