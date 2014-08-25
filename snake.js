@@ -119,7 +119,7 @@
       setTimeout(function () {
         
         $("#seconds").text("0");
-        var game = new S.Snake('S',10);
+        var game = new S.Snake('S',5);
 
         var view = new S.View('#field', game);
         view.prestart();
@@ -359,7 +359,7 @@
     }
     
     
-    if (Math.floor(Math.random()*80) === 1) {
+    if (Math.floor(Math.random()*100) === 1) {
       that.longer()
     }
     
