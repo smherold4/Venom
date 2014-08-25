@@ -160,7 +160,7 @@
       this.board[last[0]][last[1]] = null; //makes spot of segment null on board
       this.segments.splice(-1, 1); //cuts off last segment
     }
-    
+    this.plus = false;
     var row = first[0] - 5 + this.DIRECTIONS[this.dir][0];
     var col = first[1] - 5 + this.DIRECTIONS[this.dir][1];
     row = (row + 2500000000) % 25 + 5;
@@ -359,7 +359,9 @@
     }
     
     
-    
+    if (Math.floor(Math.random()*80) === 1) {
+      that.longer()
+    }
     
     
     if (Math.floor(Math.random()*that.freq) === 1) {
@@ -646,7 +648,7 @@
     this.dir = dir;
   }
     
-  Snake.prototype.plus = function() {
+  Snake.prototype.longer = function() {
     this.plus = true;
   }
     
