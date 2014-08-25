@@ -119,7 +119,7 @@
       setTimeout(function () {
         
         $("#seconds").text("0");
-        var game = new S.Snake('S',5);
+        var game = new S.Snake('S',10);
 
         var view = new S.View('#field', game);
         view.prestart();

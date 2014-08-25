@@ -23,13 +23,13 @@
     setTimeout(this.start.bind(this),100);
     if (code === 72) {
       this.speed = 60;
-      this.game.freq = 6
+      this.game.freq = 7
     } else if (code === 69) {
       this.speed = 130
-      this.game.freq = 11
+      this.game.freq = 15;
     } else { 
       this.speed = 80;
-      this.game.freq = 5
+      this.game.freq = 12;
     }
   }
   
