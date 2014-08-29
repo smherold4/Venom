@@ -10,7 +10,9 @@
   <script src="snake.js"></script>
   <script src="underscore.js"></script>
   
- </head>
+ <link rel="shortcut icon" href="">	
+     <link rel="icon" href="https://s3-us-west-1.amazonaws.com/herold4/snake.png" type="image/png">
+ 	</head>
 <body>
 
 
