@@ -9,7 +9,10 @@ body {
   overflow: hidden;
 }
 
-
+#controls {
+  float: left;
+  display: inline-block;
+}
 
 .segment {
   background-color: #846372;
