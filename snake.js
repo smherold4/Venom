@@ -46,37 +46,35 @@
     //then it puts the initial snake segments on the board
     var b = new S.Board();
     this.segments.forEach( function(segment,idx) {
-      if (idx === 0) {
-        b.bArray[segment[0]][segment[1]] = '<img src="nn.png">';
-      }
+
       
-      b.bArray[segment[0]][segment[1]] = '<img class="segment" src="green.png">';     
+      b.bArray[segment[0]][segment[1]] = '<div class="segment green"/>';     
     })
 
   
-    b.bArray[this.gunSouth[0]][this.gunSouth[1]] = '<img class="guns" src="triSouth.png">';
+    b.bArray[this.gunSouth[0]][this.gunSouth[1]] = '<div class="guns triSouth"/>';
     
-    b.bArray[this.gunSouth[0]][this.gunSouth[1] + 1] = '<img class="guns" src="triSouthRight.png">';
+    b.bArray[this.gunSouth[0]][this.gunSouth[1] + 1] = '<div class="guns triSouthRight"/>';
     
-    b.bArray[this.gunSouth[0]][this.gunSouth[1] - 1] = '<img class="guns" src="triSouthLeft.png">';
+    b.bArray[this.gunSouth[0]][this.gunSouth[1] - 1] = '<div class="guns triSouthLeft"/>';
    
-    b.bArray[this.gunEast[0]][this.gunEast[1]] = '<img class="guns" src="triEast.png">';
+    b.bArray[this.gunEast[0]][this.gunEast[1]] = '<div class="guns triEast"/>';
     
-    b.bArray[this.gunEast[0] - 1][this.gunEast[1]] = '<img class="guns" src="triEastTop.png">';
+    b.bArray[this.gunEast[0] - 1][this.gunEast[1]] = '<div class="guns triEastTop"/>';
     
-    b.bArray[this.gunEast[0] + 1][this.gunEast[1]] = '<img class="guns" src="triEastBottom.png">';
+    b.bArray[this.gunEast[0] + 1][this.gunEast[1]] = '<div class="guns triEastBottom"/>';
     
-    b.bArray[this.gunNorth[0]][this.gunNorth[1]] = '<img class="guns" src="triNorth.png">';
+    b.bArray[this.gunNorth[0]][this.gunNorth[1]] = '<div class="guns triNorth"/>';
     
-    b.bArray[this.gunNorth[0]][this.gunNorth[1] + 1] = '<img class="guns" src="triNorthRight.png">';
+    b.bArray[this.gunNorth[0]][this.gunNorth[1] + 1] = '<div class="guns triNorthRight"/>';
     
-    b.bArray[this.gunNorth[0]][this.gunNorth[1] - 1] = '<img class="guns" src="triNorthLeft.png">';
+    b.bArray[this.gunNorth[0]][this.gunNorth[1] - 1] = '<div class="guns triNorthLeft"/>';
    
-    b.bArray[this.gunWest[0]][this.gunWest[1]] = '<img class="guns" src="triWest.png">';
+    b.bArray[this.gunWest[0]][this.gunWest[1]] = '<div class="guns triWest"/>';
     
-    b.bArray[this.gunWest[0] - 1][this.gunWest[1]] = '<img class="guns" src="triWestTop.png">';
+    b.bArray[this.gunWest[0] - 1][this.gunWest[1]] = '<div class="guns triWestTop"/>';
     
-    b.bArray[this.gunWest[0] + 1][this.gunWest[1]] = '<img class="guns" src="triWestBottom.png">';
+    b.bArray[this.gunWest[0] + 1][this.gunWest[1]] = '<div class="guns triWestBottom"/>';
    
     
   
@@ -219,9 +217,9 @@
         that.board[rowN][colN] = null;
       } else {
         if (Math.abs(17 - rowN) > 12 || Math.abs(17 - colN) > 12) {
-         that.board[rowN][colN] = '<img class="bordertri" src="bullet.png">'
+         that.board[rowN][colN] = '<div class="bordertri bullet"/>'
         } else {
-         that.board[rowN][colN] = '<img class="tri" src="bullet.png">'
+         that.board[rowN][colN] = '<div class="tri bullet"/>'
         } 
       
       
@@ -256,9 +254,9 @@
         that.board[rowS][colS] = null;
       } else {
         if (Math.abs(17 - rowS) > 12 || Math.abs(17 - colS) > 12) {
-         that.board[rowS][colS] = '<img class="bordertri" src="bullet.png">'
+         that.board[rowS][colS] = '<div class="bordertri bullet"/>'
         } else {
-         that.board[rowS][colS] = '<img class="tri" src="bullet.png">'
+         that.board[rowS][colS] = '<div class="tri bullet"/>'
         } 
       } 
     }
@@ -288,9 +286,9 @@
         that.board[rowE][colE] = null;
       } else {
         if (Math.abs(17 - rowE) > 12 || Math.abs(17 - colE) > 12) {
-         that.board[rowE][colE] = '<img class="bordertri" src="bullet.png">'
+         that.board[rowE][colE] = '<div class="bordertri bullet"/>'
         } else {
-         that.board[rowE][colE] = '<img class="tri" src="bullet.png">'
+         that.board[rowE][colE] = '<div class="tri bullet"/>'
         } 
       } 
     }
@@ -319,9 +317,9 @@
         that.board[rowW][colW] = null;
       } else {
         if (Math.abs(17 - rowW) > 12 || Math.abs(17 - colW) > 12) {
-         that.board[rowW][colW] = '<img class="bordertri" src="bullet.png">'
+         that.board[rowW][colW] = '<div class="bordertri bullet"/>'
         } else {
-         that.board[rowW][colW] = '<img class="tri" src="bullet.png">'
+         that.board[rowW][colW] = '<div class="tri bullet"/>'
         } 
       } 
     }
@@ -382,9 +380,9 @@
         that.board[p][q - 1] = null;
         that.board[p][q - 2] = null;
         
-      that.board[p][q + sdir - 1] = '<img class="guns" src="triSouthLeft.png">';
-      that.board[p][q + sdir] = '<img class="guns" src="triSouth.png">';
-      that.board[p][q + sdir + 1] = '<img class="guns" src="triSouthRight.png">';
+      that.board[p][q + sdir - 1] = '<div class="guns triSouthLeft"/>';
+      that.board[p][q + sdir] = '<div class="guns triSouth"/>';
+      that.board[p][q + sdir + 1] = '<div class="guns triSouthRight"/>';
         that.gunSouth = [p, q + sdir, that.gunSouth[2]];
       }
     }
@@ -404,9 +402,9 @@
         that.board[t][v - 1] = null;
         that.board[t][v - 2] = null;
         
-      that.board[t][v + ndir - 1] = '<img class="guns" src="triNorthLeft.png">';
-      that.board[t][v + ndir] = '<img class="guns" src="triNorth.png">';
-      that.board[t][v + ndir + 1] = '<img class="guns" src="triNorthRight.png">';
+      that.board[t][v + ndir - 1] = '<div class="guns triNorthLeft"/>';
+      that.board[t][v + ndir] = '<div class="guns triNorth"/>';
+      that.board[t][v + ndir + 1] = '<div class="guns triNorthRight"/>';
         that.gunNorth = [t, v + ndir, that.gunNorth[2]];
       }
     }
@@ -428,9 +426,9 @@
         that.board[r + 1][s] = null;
         that.board[r + 2][s] = null;
         
-      that.board[r + edir + 1][s] = '<img class="guns" src="triEastBottom.png">';
-      that.board[r + edir][s] = '<img class="guns" src="triEast.png">';
-      that.board[r + edir - 1][s] = '<img class="guns" src="triEastTop.png">';
+      that.board[r + edir + 1][s] = '<div class="guns triEastBottom"/>';
+      that.board[r + edir][s] = '<div class="guns triEast"/>';
+      that.board[r + edir - 1][s] = '<div class="guns triEastTop"/>';
         that.gunEast = [r + edir, s, that.gunEast[2]];
       }
     }
@@ -452,9 +450,9 @@
       that.board[w - 1][x] = null;
       that.board[w - 2][x] = null;
     
-    that.board[w + wdir - 1][x] = '<img class="guns" src="triWestTop.png">';  
-    that.board[w + wdir][x] = '<img class="guns" src="triWest.png">';
-    that.board[w + wdir + 1][x] = '<img class="guns" src="triWestBottom.png">';
+    that.board[w + wdir - 1][x] = '<div class="guns triWestTop"/>';  
+    that.board[w + wdir][x] = '<div class="guns triWest"/>';
+    that.board[w + wdir + 1][x] = '<div class="guns triWestBottom"/>';
       that.gunWest = [w + wdir, x, that.gunWest[2]];
       }
     }
@@ -464,7 +462,7 @@
     if (this.venomLeft.length > 0) {
      var row = this.venomLeft[0];
      var col = this.venomLeft[1];
-     if (this.board[row][col] !== '<img class="tri" src="bullet.png">') {
+     if (this.board[row][col] !== '<div class="tri bullet"/>') {
        this.board[row][col] = null;
      }
      var chRow = this.venomLeft[2][0]
@@ -472,7 +470,7 @@
      this.venomLeft[0] = row + chRow;
      this.venomLeft[1] = col + chCol;
      
-     if (row + chRow > 34 || row + chRow < 0 || col + chCol > 34 || col + chCol < 0 || (this.board[row + chRow][col + chCol] === '<img class="tri" src="bullet.png">')) {
+     if (row + chRow > 34 || row + chRow < 0 || col + chCol > 34 || col + chCol < 0 || (this.board[row + chRow][col + chCol] === '<div class="tri bullet"/>')) {
        this.venomLeft[0] = 35;
        this.venomLeft[1] = 35;
      }
@@ -538,9 +536,9 @@
   
      if (this.venomLeft.length > 0) {
        if (Math.abs(17 - row - chRow) > 12 || Math.abs(17 - col - chCol) > 12) {
-       this.board[row + chRow][col + chCol] = '<img class="outsidevenom" src="venom.png">';
+       this.board[row + chRow][col + chCol] = '<div class="venom outsidevenom"/>';
        } else {
-       this.board[row + chRow][col + chCol] = '<img class="venom" src="venom.png">';
+       this.board[row + chRow][col + chCol] = '<div class="venom insidevenom"/>';
        }
      } 
      
@@ -553,14 +551,14 @@
      var chRow = this.venomRight[2][0];
      var chCol = this.venomRight[2][1];
      
-     if (this.board[row][col] !== '<img class="tri" src="bullet.png">') {
+     if (this.board[row][col] !== '<div class="tri bullet"/>') {
        this.board[row][col] = null;
      }
      
      this.venomRight[0] = row + chRow;
      this.venomRight[1] = col + chCol;
      
-     if (row + chRow > 34 || row + chRow < 0 || col + chCol > 34 || col + chCol < 0 || (this.board[row + chRow][col + chCol] === '<img class="tri" src="bullet.png">')) {
+     if (row + chRow > 34 || row + chRow < 0 || col + chCol > 34 || col + chCol < 0 || (this.board[row + chRow][col + chCol] === '<div class="tri bullet"/>')) {
        this.venomRight[0] = 35;
        this.venomRight[1] = 35;
      }
@@ -631,9 +629,9 @@
   
      if (this.venomRight.length > 0) {
        if (Math.abs(17 - row - chRow) > 12 || Math.abs(17 - col - chCol) > 12) {
-       this.board[row + chRow][col + chCol] = '<img class="outsidevenom" src="venom.png">';
+       this.board[row + chRow][col + chCol] = '<div class="venom outsidevenom"/>';
        } else {
-       this.board[row + chRow][col + chCol] = '<img class="venom" src="venom.png">';
+       this.board[row + chRow][col + chCol] = '<div class="venom insidevenom"/>';
        }
      }  
      
