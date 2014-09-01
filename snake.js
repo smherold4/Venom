@@ -88,18 +88,18 @@
       var row = first[0]
       var col = first[1]
       if (this.dir === "N")  {
-        this.venomLeft = [row - 1,col,[-1, 1]]
-        this.venomRight = [row - 1,col,[-1, -1]] 
+        this.venomLeft = [row - 2,col + 1,[-1, 1]]
+        this.venomRight = [row - 2,col - 1,[-1, -1]] 
       } else if(this.dir === "S") {
-        this.venomLeft = [row + 1,col,[1, 1]]
-        this.venomRight = [row + 1,col,[1, -1]] 
+        this.venomLeft = [row + 2,col + 1,[1, 1]]
+        this.venomRight = [row + 2,col - 1,[1, -1]] 
         
       } else if (this.dir === "E") {
-        this.venomLeft = [row,col + 1,[1, 1]]
-        this.venomRight = [row,col + 1,[-1, 1]]
+        this.venomLeft = [row + 1,col + 2,[1, 1]]
+        this.venomRight = [row - 1,col + 2,[-1, 1]]
       } else if (this.dir === "W") {
-        this.venomLeft = [row,col - 1,[1, -1]]
-        this.venomRight = [row,col - 1,[-1, -1]]
+        this.venomLeft = [row + 1,col - 2,[1, -1]]
+        this.venomRight = [row - 2,col - 2,[-1, -1]]
         
       }
     }
