@@ -127,7 +127,7 @@
         
         
         
-      }, 1500)
+      }, 1000)
       
       // this.segments.splice(-1,1)
     } else {
@@ -147,7 +147,6 @@
     
   Snake.prototype.move = function() {
 
-    
     //this the precursor to renderign
     this.clock += 1;
     this.venomClock -= 1;
@@ -168,9 +167,9 @@
     this.segments.unshift([row, col]);
     
     if (this.venomClock <= 0) {
-      this.board[row][col] = '<img class="segment" src="yellow.png">';
+      this.board[row][col] = '<div class="yellow segment"/>';
     } else {
-    this.board[row][col] = '<img class="segment" src="green.png">';
+    this.board[row][col] = '<div class="green segment"/>';
     }
     var that = this;
     if (that.gunSouth) {

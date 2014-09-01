@@ -88,3 +88,115 @@ h1 {
   
   color: green;
 }
+
+.triEast, .triEastBottom, .triEastTop, .triNorth, .triNorthLeft, .triNorthRight, .triSouth, .triSouthLeft, .triSouthRight, .triWest, .triWestBottom, .triWestTop, .underscore, .venom, .yellow, .bullet, .green{
+  background: url(sprites.png) no-repeat;
+  display: inline-block;
+}
+
+/*.triEast{
+  background-position: -165px -89px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triEastBottom{
+  background-position: -165px -121px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triEastTop{
+  background-position: -161px -60px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triNorth{
+  background-position: -143px -17px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triNorthLeft{
+  background-position: -93px -14px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triNorthRight{
+  background-position: -183px -20px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triSouth{
+  background-position: -81px -66px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triSouthLeft{
+  background-position: -47px -66px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triSouthRight{
+  background-position: -111px -68px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triWest{
+  background-position: -11px -71px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triWestBottom{
+  background-position: -9px -105px ;
+  width: 20px;
+  height: 20px;
+}
+
+.triWestTop{
+  background-position: -9px -42px ;
+  width: 20px;
+  height: 20px;
+}
+
+.underscore{
+  background-position: -186px -232px ;
+  width: 0px;
+  height: 0px;
+}
+
+.venom{
+  background-position: -222px -12px ;
+  width: 20px;
+  height: 20px;
+}
+
+.bullet{
+  background-position: -92px -105px ;
+  width: 20px;
+  height: 20px;
+}
+*/
+.yellow{
+  background-position: -220px -50px ;
+  background-color: #858585;
+	width: 20px;
+	height: 20px;
+}
+
+
+
+.green{
+  background-position: -50px -108px ;
+  background-color: #858585;
+	width: 20px;
+	height: 20px;
+}
+

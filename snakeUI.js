@@ -13,7 +13,7 @@
     var that = this;
     setTimeout(function () {
       $("body").one('keydown',that.startHandler.bind(that))
-    },1200)
+    },1000)
     
   }
 
@@ -92,6 +92,7 @@
 
   View.prototype.render = function(){
     var draw_string = this.game.iterate()
+    debugger
     $(this.$el).html(draw_string)
   }
   
