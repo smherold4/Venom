@@ -11,20 +11,8 @@ body {
 
 
 
-.tri {
-  background-color: none;
-  background-image: none;
-
-}
-
-.bordertri {
-  background-color: black;
-  background-image: none;
-  
-}
-
 .segment {
-  background-color: #858585;
+  background-color: #846372;
 
 }
 
@@ -45,7 +33,7 @@ div.black {
   
   height: 20px;
   width: 20px;
-  background-color: #858585;
+  background-color: #846372;
   display: inline-block;
 }
 
@@ -179,20 +167,18 @@ h1 {
   background-position: -220px -50px ;
 	width: 20px;
 	height: 20px;
-  background-color: #858585;
+  background-color: #846372;
 }
-
-
 
 .green{
   background-position: -50px -108px ;
-  background-color: #858585;
+  background-color: #846372;
 	width: 20px;
 	height: 20px;
 }
 
 .insidevenom {
-background-color: #858585;
+background-color: #846372;
 
 }
 
@@ -201,3 +187,14 @@ background-color: #858585;
   
 }
 
+.tri {
+  background-color: #846372;
+
+
+}
+
+.bordertri {
+  background-color: black;
+
+  
+}
