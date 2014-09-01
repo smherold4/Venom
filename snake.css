@@ -9,19 +9,10 @@ body {
   overflow: hidden;
 }
 
-.insidevenom {
-background-color: #858585;
-background-image: none;
 
-}
-
-.outsidevenom {
-  background-color: black;
-  
-}
 
 .tri {
-  background-color: #858585;
+  background-color: none;
   background-image: none;
 
 }
@@ -91,6 +82,7 @@ h1 {
 .triEast, .triEastBottom, .triEastTop, .triNorth, .triNorthLeft, .triNorthRight, .triSouth, .triSouthLeft, .triSouthRight, .triWest, .triWestBottom, .triWestTop, .underscore, .venom, .yellow, .bullet, .green{
   background: url(sprites.png) no-repeat;
   display: inline-block;
+  
 }
 
 .triEast{
@@ -185,9 +177,9 @@ h1 {
 
 .yellow{
   background-position: -220px -50px ;
-  background-color: #858585;
 	width: 20px;
 	height: 20px;
+  background-color: #858585;
 }
 
 
@@ -197,5 +189,15 @@ h1 {
   background-color: #858585;
 	width: 20px;
 	height: 20px;
+}
+
+.insidevenom {
+background-color: #858585;
+
+}
+
+.outsidevenom {
+  background-color: black;
+  
 }
 

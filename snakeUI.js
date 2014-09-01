@@ -92,7 +92,6 @@
 
   View.prototype.render = function(){
     var draw_string = this.game.iterate()
-    debugger
     $(this.$el).html(draw_string)
   }
   
